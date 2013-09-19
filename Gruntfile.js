@@ -8,23 +8,18 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
+	grunt.initConfig( {
+		stitch: {
+			all: {
+				templateFile: 'testing/tpl.js',
+				out: 'testing/out.js'
+			}
+		}
+	} );
 
-  // Project configuration.
-  grunt.initConfig({
-    // Configuration to be run (and then tested).
-    stitch: {
-      all: {
-        templateFile: 'testing/tpl.js',
-        out: 'testing/out.js'
-      }
-    }
-  });
+	// Actually load this plugin's task(s).
+	grunt.loadTasks( 'tasks' );
 
-  // Actually load this plugin's task(s).
-  grunt.loadTasks('tasks');
-
-  // By default, lint and run all tests.
-  grunt.registerTask('default', ['stitch']);
-
+	grunt.registerTask( 'default', [ 'stitch' ] );
 };

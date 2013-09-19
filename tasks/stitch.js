@@ -9,19 +9,6 @@
 'use strict';
 
 module.exports = function ( grunt ) {
-
-	function getOptionsError ( templateFileName, outFileName ) {
-		if ( templateFileName == null ) {
-			return '`templateFile` not set, can\'t continue';
-		}
-
-		if ( outFileName == null ) {
-			return '`out` not set, can\'t continue';
-		}
-
-		return null;
-	};
-
 	grunt.registerMultiTask( 'stitch', 'Todo description', function () {
 		var templateFileName = this.data.templateFile,
 			outFileName = this.data.out,
@@ -54,5 +41,17 @@ module.exports = function ( grunt ) {
 		grunt.file.write( outFileName, templateFileContents );
 
 		grunt.log.writeln( 'Output file "' + outFileName + '" created.' );
-	});
+	} );
+
+	function getOptionsError ( templateFileName, outFileName ) {
+		if ( templateFileName == null ) {
+			return '`templateFile` not set, can\'t continue';
+		}
+
+		if ( outFileName == null ) {
+			return '`out` not set, can\'t continue';
+		}
+
+		return null;
+	};
 };
