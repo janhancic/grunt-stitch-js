@@ -1,7 +1,7 @@
 {
   "name": "grunt-stitch-js",
   "description": "A grunt task that can stitch together multiple files into one based on the provided template.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/janhancic/grunt-stitch-js",
   "author": {
     "name": "Jan Hancic",
