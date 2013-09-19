@@ -34,7 +34,7 @@ npm install grunt-stitch-js --save-dev
 Load the task in your `Gruntfile.js`:
 
 ```javascript
-grunt.loadNpmTasks('stitch-js');
+grunt.loadNpmTasks('grunt-stitch-js');
 ```
 
 ## Configuration
