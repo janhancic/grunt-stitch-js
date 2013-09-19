@@ -37,6 +37,8 @@ Load the task in your `Gruntfile.js`:
 grunt.loadNpmTasks('grunt-stitch-js');
 ```
 
+_Note_: NPM registry page for this plugin can be found [here](https://npmjs.org/package/grunt-stitch-js).
+
 ## Configuration
 In  order for the task to work it needs to know about two files:
 - `templateFile`: the file to use as the template
