@@ -1,6 +1,6 @@
 /*
- * grunt-stitch
- * https://github.com/janhancic/grunt-stitch
+ * grunt-stitch-js
+ * https://github.com/janhancic/grunt-stitch-js
  *
  * Copyright (c) 2013 Jan Hancic
  * Licensed under the MIT license.
@@ -9,7 +9,7 @@
 'use strict';
 
 module.exports = function ( grunt ) {
-	grunt.registerMultiTask( 'stitch', 'Todo description', function () {
+	grunt.registerMultiTask( 'stitch-js', 'Stitch together multiple files into one.', function () {
 		var templateFileName = this.data.templateFile,
 			outFileName = this.data.out,
 			optionsError = null,

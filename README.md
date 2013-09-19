@@ -1,4 +1,4 @@
-# grunt-stitch
+# grunt-stitch-js
 
 A grunt task that can stitch together multiple files into one based on the provided template.
 
@@ -29,12 +29,12 @@ contents of some_file.js file
 Install the plugin with `npm`:
 
 ```shell
-npm install grunt-stitch --save-dev
+npm install grunt-stitch-js --save-dev
 ```
 Load the task in your `Gruntfile.js`:
 
 ```javascript
-grunt.loadNpmTasks('grunt-stitch');
+grunt.loadNpmTasks('stitch-js');
 ```
 
 ## Configuration
@@ -46,7 +46,7 @@ To configure the task put this into your `Gruntfile.js`.
 
 ```javascript
 grunt.initConfig( {
-	stitch: {
+	'stitch-js': {
 		all: {
 			templateFile: 'path/to/template.js',
 			out: 'path/to/out.js'
@@ -55,7 +55,7 @@ grunt.initConfig( {
 } );
 ```
 
-_Note_: you can have multiple targets (invoked with `grunt stitch:target_name`). `all` is one such target.
+_Note_: you can have multiple targets (invoked with `grunt stitch-js:target_name`). `all` is one such target.
 
 Please referrer to the Grunt [Getting Started](http://gruntjs.com/getting-started) guide, if you haven't used Grunt before and need help.
 

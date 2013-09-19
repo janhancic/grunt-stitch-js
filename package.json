@@ -1,8 +1,8 @@
 {
-  "name": "grunt-stitch",
-  "description": "Todo description",
+  "name": "grunt-stitch-js",
+  "description": "A grunt task that can stitch together multiple files into one based on the provided template.",
   "version": "0.1.0",
-  "homepage": "https://github.com/janhancic/grunt-stitch",
+  "homepage": "https://github.com/janhancic/grunt-stitch-js",
   "author": {
     "name": "Jan Hancic",
     "email": "jan.hancic@gmail.com",
@@ -10,23 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/janhancic/grunt-stitch.git"
+    "url": "git://github.com/janhancic/grunt-stitch-js.git"
   },
   "bugs": {
-    "url": "https://github.com/janhancic/grunt-stitch/issues"
+    "url": "https://github.com/janhancic/grunt-stitch-js/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/janhancic/grunt-stitch/blob/master/LICENSE.md"
+      "url": "https://github.com/janhancic/grunt-stitch-js/blob/master/LICENSE.md"
     }
   ],
-  "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "grunt test"
   },
   "devDependencies": {
     "grunt": "~0.4.1"

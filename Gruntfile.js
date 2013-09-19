@@ -1,6 +1,6 @@
 /*
- * grunt-stitch
- * https://github.com/janhancic/grunt-stitch
+ * grunt-stitch-js
+ * https://github.com/janhancic/grunt-stitch-js
  *
  * Copyright (c) 2013 Jan Hancic
  * Licensed under the MIT license.
@@ -10,7 +10,7 @@
 
 module.exports = function( grunt ) {
 	grunt.initConfig( {
-		stitch: {
+		'stitch-js': {
 			all: {
 				templateFile: 'testing/tpl.js',
 				out: 'testing/out.js'
@@ -21,5 +21,5 @@ module.exports = function( grunt ) {
 	// Actually load this plugin's task(s).
 	grunt.loadTasks( 'tasks' );
 
-	grunt.registerTask( 'default', [ 'stitch' ] );
+	grunt.registerTask( 'default', [ 'stitch-js' ] );
 };
