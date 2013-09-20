@@ -41,6 +41,8 @@ module.exports = function ( grunt ) {
 		grunt.file.write( outFileName, templateFileContents );
 
 		grunt.log.writeln( 'Output file "' + outFileName + '" created.' );
+
+		return true;
 	} );
 
 	function getOptionsError ( templateFileName, outFileName ) {
