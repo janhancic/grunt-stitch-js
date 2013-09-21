@@ -62,6 +62,6 @@ _Note_: you can have multiple targets (invoked with `grunt stitch-js:target_name
 Please referrer to the Grunt [Getting Started](http://gruntjs.com/getting-started) guide, if you haven't used Grunt before and need help.
 
 ## License
-Licensed under MIT. See `LICENSE.md` file for details.
+Licensed under MIT. See [LICENSE.md](https://github.com/janhancic/grunt-stitch-js/blob/master/LICENSE.md) file for details.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/janhancic/grunt-stitch-js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
