@@ -13,7 +13,11 @@ module.exports = function ( grunt ) {
 		var templateFileName = this.data.templateFile,
 			outFileName = this.data.out,
 			optionsError = null,
-			templateFileContents = null;
+			templateFileContents = null,
+			matchesToReplace,
+			match,
+			fileName,
+			srcFileContents;
 
 		optionsError = getOptionsError( templateFileName, outFileName );
 		if ( optionsError !== null ) {
@@ -29,14 +33,21 @@ module.exports = function ( grunt ) {
 		templateFileContents = grunt.file.read( templateFileName );
 
 		// matches: /*# FILE_NAME.js #*/
-		var matchesToReplace = templateFileContents.match( /\/\*# (.*?)\.js #\*\//g );
+		matchesToReplace = templateFileContents.match( /\/\*# (.*?)\.js #\*\//g );
 
-		matchesToReplace.forEach( function ( match ) {
-			var fileName = match.replace( '/*# ', '' ).replace( ' #*/', '' );
-			var srcFileContents = grunt.file.read( fileName );
+		for ( var i = 0, len = matchesToReplace.length; i < len; i++ ) {
+			match = matchesToReplace[i];
+			fileName = match.replace( '/*# ', '' ).replace( ' #*/', '' );
+
+			if ( grunt.file.exists( fileName ) === false ) {
+				grunt.log.error( 'File ' + fileName + ' does not exist.' );
+				return false;
+			}
+
+			srcFileContents = grunt.file.read( fileName );
 
 			templateFileContents = templateFileContents.replace( match, srcFileContents );
-		} );
+		};
 
 		grunt.file.write( outFileName, templateFileContents );
 
